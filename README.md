@@ -34,4 +34,13 @@ $ npx create-react-app@3.4.1 .
 
 ### Exercise: Initial Configuration
 
--
+- Please use npm!!!!!
+- Add bootstrap, reactstrap, and react-popper with the following version numbers:
+
+```bash
+$ npm i bootstrap@4.5.2 reactstrap@8.5.1 react-popper@1.3.6
+```
+
+- if you want to see something cool, watch [package.json](package.json) while the packages are loading!
+- [index.js](src/index.js) should look like this. See the comments
+- [App.js](src/App.js) should look like and running `npm start` should look like the video. Slack me if it doesn't!
