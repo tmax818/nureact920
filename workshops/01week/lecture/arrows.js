@@ -1,9 +1,0 @@
-////
-
-// function hello(name) {
-//   return { studentName: name };
-// }
-
-const hello = (name) => ({ studentName: name });
-
-module.exports = hello;
