@@ -17,3 +17,15 @@
 - [task1](workshops/01week/workshop/notes.md)
 - [task2](workshops/01week/workshop/notes.md)
 - [task3](workshops/01week/workshop/notes.md)
+
+## Week 2: Welcome to React
+
+- This was done in a previous branch with the following:
+
+```bash
+$ mkdir nureact920
+$ cd nureact920
+$ npx create-react-app@3.4.1 .
+```
+
+- this branch is a react app created by running npx.
