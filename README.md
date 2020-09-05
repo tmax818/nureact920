@@ -31,3 +31,7 @@ $ npx create-react-app@3.4.1 .
 ```
 
 - this branch is a react app created by running npx.
+
+### Exercise: Initial Configuration
+
+-
