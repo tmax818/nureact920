@@ -20,6 +20,8 @@
 
 ## Week 2: Welcome to React
 
+### Exercise: Getting Started with React
+
 - This was done in a previous branch with the following:
 
 ```bash
