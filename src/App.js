@@ -1,11 +1,17 @@
 import React, { Component } from "react";
 import { Navbar, NavbarBrand } from "reactstrap";
 import "./App.css";
-// Add the import statement below:
 import Directory from "./components/Directory";
-// Add the above:
+///What does the line below do?
+import { CAMPSITES } from "./shared/campsites";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      campsites: CAMPSITES,
+    };
+  }
   render() {
     return (
       <div className="App">
@@ -14,9 +20,8 @@ class App extends Component {
             <NavbarBrand href="/">NuCamp</NavbarBrand>
           </div>
         </Navbar>
-        {/* paste the following */}
-        <Directory />
-        {/* paste the above */}
+        {/* what is the campsites attribute doing in the line below? */}
+        <Directory campsites={this.state.campsites} />
       </div>
     );
   }
