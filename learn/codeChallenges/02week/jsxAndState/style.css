@@ -1,0 +1,14 @@
+.blue-box {
+  border: solid blue;
+  padding: 1rem;
+}
+
+.orange-box {
+  border: solid orange;
+  padding: 1rem;
+}
+
+body {
+  font-family: "Oxygen", sans-serif;
+  margin-top: 2rem;
+}
