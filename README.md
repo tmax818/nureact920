@@ -76,3 +76,36 @@ $ npm i typeface-lobster typeface-open-sans
 #### Task 1
 
 - Add [CampsiteInfo.js](src/components/CampsiteInfo.js)
+- Update [Directory.js](src/components/Directory.js)
+
+- Before:
+
+```jsx
+
+    return (
+      <div className="container">
+        <div className="row">{directory}</div>
+        <div className="row">
+          <div className="col-md-5 m-1">
+            {this.renderSelectedCampsite(this.state.selectedCampsite)}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+```
+
+- After:
+
+```jsx
+    return (
+      <div className="container">
+        <div className="row">{directory}</div>
+        <div className="row">
+          <CampsiteInfo campsite={this.state.selectedCampsite} />
+        </div>
+      </div>
+    );
+  }
+```

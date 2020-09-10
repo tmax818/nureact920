@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// add the import statement below:
 import {
   Card,
   CardImg,
@@ -8,7 +7,8 @@ import {
   CardBody,
   CardTitle,
 } from "reactstrap";
-// What is all this stuff????
+
+import CampsiteInfo from "./CampsiteInfo";
 
 class Directory extends Component {
   constructor(props) {
@@ -20,6 +20,7 @@ class Directory extends Component {
 
   onCampsiteSelect(campsite) {
     this.setState({ selectedCampsite: campsite });
+    console.log(this.state);
   }
 
   renderSelectedCampsite(campsite) {
@@ -55,9 +56,7 @@ class Directory extends Component {
       <div className="container">
         <div className="row">{directory}</div>
         <div className="row">
-          <div className="col-md-5 m-1">
-            {this.renderSelectedCampsite(this.state.selectedCampsite)}
-          </div>
+          <CampsiteInfo campsite={this.state.selectedCampsite} />
         </div>
       </div>
     );

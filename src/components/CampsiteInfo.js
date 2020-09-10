@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 
-import React, { Component } from "react";
-
 class CampsiteInfo extends Component {
   render() {
     if (this.props.campsite) {
