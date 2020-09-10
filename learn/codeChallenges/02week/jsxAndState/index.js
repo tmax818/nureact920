@@ -8,7 +8,12 @@ class Example extends React.Component {
 
   render() {
     const course = "React";
-    return <div></div>;
+    return (
+      <div>
+        <span className="blue-box">{this.state.bootcamp}</span>
+        <span className="orange-box">{course}</span>
+      </div>
+    );
   }
 }
 
