@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Code Challenge: Constructing Lists</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <br />
+    <hr />
+
+    <p>
+      In the JS section of this Codepen is a React class component called App
+      that contains some information about an upcoming party in its state. For
+      the following challenges, you will only need to edit code in the JS
+      section, not the HTML or CSS.
+    </p>
+
+    <ul>
+      <li>
+        <strong>Challenge 1</strong>: Between the div tags at lines 18 and 20 of
+        the JS section, render a component named
+        <strong>&lt;Party&gt;</strong> and pass the partyType, entertainment,
+        and venue properties from the state.
+      </li>
+      <li>
+        <strong>Challenge 2</strong>: Create/define a new React component named
+        Party. In it, have it return a div that contains h3 tags surrounding the
+        words Party Time!, followed by two paragraph elements that use the
+        passed-in props. The first paragraph element will say: This _____ party
+        will be held at ______ with a maximum capacity of ____. The second
+        paragraph element will say: Featured entertainment: ______! The blanks
+        will be filled in using props. See the screenshot in the learning portal
+        page for this code challenge.
+      </li>
+      <li>
+        <strong>Challenge 3</strong>: Add another property to the state in App,
+        pass it as props to the Party component, and use it somewhere in the
+        Party component. The property is up to you. Some examples: an array with
+        a list of guest names, a cake flavor, the name of the birthday person,
+        the address of the venue, etc!
+      </li>
+    </ul>
+
+    <hr />
+    <h3>Additional Resources</h3>
+    <ul>
+      <li>
+        <a
+          href="https://reactjs.org/docs/components-and-props.html"
+          target="_blank"
+          >React - Components and Props</a
+        >
+      </li>
+    </ul>
+
+    <script type="text/babel" src="index.js"></script>
+  </body>
+</html>
