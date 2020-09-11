@@ -53,7 +53,7 @@ class Directory extends Component {
         </div>
       );
     });
-
+    console.log(directory);
     return (
       <div className="container">
         <div className="row">{directory}</div>
