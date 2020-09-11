@@ -1,12 +1,5 @@
 import React, { Component } from "react";
-import {
-  Card,
-  CardImg,
-  CardImgOverlay,
-  CardText,
-  CardBody,
-  CardTitle,
-} from "reactstrap";
+import { Card, CardImg, CardImgOverlay, CardTitle } from "reactstrap";
 
 import CampsiteInfo from "./CampsiteInfo";
 
@@ -21,21 +14,6 @@ class Directory extends Component {
   onCampsiteSelect(campsite) {
     this.setState({ selectedCampsite: campsite });
     console.log(this.state);
-  }
-
-  renderSelectedCampsite(campsite) {
-    if (campsite) {
-      return (
-        <Card>
-          <CardImg top src={campsite.image} alt={campsite.name} />
-          <CardBody>
-            <CardTitle>{campsite.name}</CardTitle>
-            <CardText>{campsite.description}</CardText>
-          </CardBody>
-        </Card>
-      );
-    }
-    return <div />;
   }
 
   render() {
