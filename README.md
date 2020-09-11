@@ -113,3 +113,5 @@ $ npm i typeface-lobster typeface-open-sans
 #### Task 2
 
 - Add the `renderCampsite()` method to [CampsiteInfo.js](src/components/CampsiteInfo.js)
+
+#### Task 3
