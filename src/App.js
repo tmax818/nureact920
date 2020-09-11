@@ -5,6 +5,8 @@ import Directory from "./components/Directory";
 ///What does the line below do?
 import { CAMPSITES } from "./shared/campsites";
 
+console.log(CAMPSITES);
+
 class App extends Component {
   constructor(props) {
     super(props);
