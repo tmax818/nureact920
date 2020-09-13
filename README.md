@@ -123,3 +123,7 @@ $ npm i typeface-lobster typeface-open-sans
 - Add [Main.js](src/components/Main.js)
 - Update [App.js](src/components/App.js)
 - Update [Directory.js](src/components/Directory.js)
+
+### Exercise: Functional Components
+
+- Update [Directory.js](src/components/Directory.js)
