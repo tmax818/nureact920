@@ -1,0 +1,9 @@
+body {
+  margin: 1rem;
+  font-family: "Oxygen", sans-serif;
+}
+
+.title {
+  background: teal;
+  color: white;
+}

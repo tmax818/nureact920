@@ -127,3 +127,7 @@ $ npm i typeface-lobster typeface-open-sans
 ### Exercise: Functional Components
 
 - Update [Directory.js](src/components/Directory.js)
+
+### Code Challenge: React Components and Object Destructuring
+
+- [code challenge](learn/codeChallenges/03week/01reactCompObjDest/index.js)
