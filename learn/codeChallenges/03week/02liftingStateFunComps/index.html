@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Code Challenge: Lifting State Up & Functional Components</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <hr />
+    <p>
+      By now, you have learned about different component types, including
+      function components and class components. In the JS section of this
+      Codepen is an example of a class component named Welcome.
+    </p>
+    <p>
+      <strong>Challenge 1:</strong> Inside the JS section, create a class
+      component named <strong>App</strong>. Inside its render() method, have it
+      return the <strong>Welcome</strong> component. In the
+      <strong>ReactDOM.render()</strong> method, change Welcome to App.
+    </p>
+    <p>
+      <strong>Challenge 2:</strong> Lift the <strong>state</strong> from the
+      Welcome component to App, so that the state is initialized inside of App's
+      constructor.
+    </p>
+
+    <p>
+      <strong>Challenge 3:</strong> Convert the Welcome component to a
+      <strong>function component</strong> that returns the same welcome message
+      as before. You will need to pass the
+      <strong>bootcampName</strong> property of state from App to the Welcome
+      component. It's up to you whether or not to destructure it -- either is
+      fine. Try it both ways for practice!
+    </p>
+
+    <script type="text/babel" src="index.js"></script>
+  </body>
+</html>
