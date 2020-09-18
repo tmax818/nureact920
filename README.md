@@ -166,3 +166,11 @@ $ npm i react-router-dom@5.2.0
 - Update the [Directory.js](src/components/Directory.js) component.
 
 ### Exercise: Adding to the Single Page App
+
+- Add:
+  - [campsites.js](src/shared/campsites.js)
+  - [comments.js](src/shared/comments.js)
+  - [partners.js](src/shared/partners.js)
+  - [promotions.js](src/shared/promotions.js)
+- Add [Contact.js](src/components/Contact.js)
+- Update [Main.js](src/components/Main.js)
