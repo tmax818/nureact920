@@ -183,3 +183,7 @@ $ npm i react-router-dom@5.2.0
 - Update [CampsiteInfo.js](src/components/CampsiteInfo.js)
 
 ### Exercise: Breadcrumbs
+
+- Update the [Directory.js](src/components/Directory.js)
+- Update [Contact.js](src/components/Contact.js)
+- Update [CampsiteInfo.js](src/components/CampsiteInfo.js)
