@@ -141,7 +141,6 @@ $ npm i typeface-lobster typeface-open-sans
 - add font-awesome and bootstrap-social
 
 ```bash
-
 $ npm i font-awesome@4.7.0 bootstrap-social@5.1.1
 ```
 
@@ -152,3 +151,15 @@ $ npm i font-awesome@4.7.0 bootstrap-social@5.1.1
 - Update [App.css](src/App.css)
 
 ### Exercise: React Router
+
+- install react-router-dom
+
+```bash
+$ npm i react-router-dom@5.2.0
+```
+
+- Update the [App.js](src/App.js) component.
+- Add the [Home.js](src/components/Home.js)
+- Update the [Main.js](src/components/Main.js) component.
+- Update the [Header.js](src/components/Header.js) component.
+- Update the [Footer.js](src/components/Footer.js) component.

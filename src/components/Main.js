@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-//ADD THIS
 import Header from "./Header";
 import Footer from "./Footer";
-// ADD ABOVE
 import Directory from "./Directory";
 import CampsiteInfo from "./CampsiteInfo";
 
