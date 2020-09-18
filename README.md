@@ -174,3 +174,4 @@ $ npm i react-router-dom@5.2.0
   - [promotions.js](src/shared/promotions.js)
 - Add [Contact.js](src/components/Contact.js)
 - Update [Main.js](src/components/Main.js)
+- Update [Home.js](src/components/Home.js)
