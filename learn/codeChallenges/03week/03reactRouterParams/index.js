@@ -1,7 +1,4 @@
-// No need to pay attention to the code below this comment. You have learned to use 'import' to bring in components from libraries in your React project. This is another way to do it that works better in Codepen. HashRouter is also used here instead of BrowserRouter due to Codepen. Do not be concerned about the differences.
 const { HashRouter, Switch, Route, Link } = ReactRouterDOM;
-
-// The code you should pay attention to begins after this comment.
 
 const ALBUMSDATA = [
   {
