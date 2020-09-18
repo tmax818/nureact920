@@ -135,3 +135,18 @@ $ npm i typeface-lobster typeface-open-sans
 ### Code Challenge: Lifting State Up & Functional ComponentsForum
 
 - [code challenge](learn/codeChallenges/03week/02liftingStateFunComps/index.js)
+
+### Exercise: Header and Footer
+
+- add font-awesome and bootstrap-social
+
+```bash
+
+$ npm i font-awesome@4.7.0 bootstrap-social@5.1.1
+```
+
+- Add import statements to [index.js](src/index.js)
+- Create [Header.js](src/components/Header.js)
+- Create [Footer.js](src/components/Footer.js)
+- Integrate the header and footer into the [Main.js](src/components/Main.js) component.
+- Update [App.css](src/App.css)
