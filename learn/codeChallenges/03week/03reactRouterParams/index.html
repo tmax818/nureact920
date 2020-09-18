@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/react-router/umd/react-router.min.js"></script>
+    <script src="https://unpkg.com/react-router-dom/umd/react-router-dom.min.js"></script>
+    <title>React Router Params</title>
+  </head>
+  <body>
+    <p><strong>First:</strong></p>
+    <ul>
+      <li>
+        Click the Albums link below, then click on Album 1 and Album 2 to
+        observe the behavior.
+      </li>
+    </ul>
+
+    <h3>Code Challenges:</h3>
+    <ol>
+      <li>
+        Add an album to the ALBUMSDATA array in the JS section. Hit the Run
+        button, then click the Albums link and see how it's changed. This is a
+        demo of how dynamic routing can work.
+      </li>
+      <li>
+        Next, for the real challenge: You are invited to play around with the
+        code and see what you can add - up to you. Some ideas: Add a component
+        that displays albums by year, using a router parameter/match param for
+        the year. Add a Random link that displays a random album. Display the
+        album title along with "Album 1" and "Album 2". Add images and links to
+        lyrics/MP3s... Up to you!
+      </li>
+    </ol>
+
+    <hr />
+    <br />
+
+    <div id="root"></div>
+
+    <script type="text/babel" src="index.js"></script>
+  </body>
+</html>
