@@ -131,3 +131,7 @@ $ npm i typeface-lobster typeface-open-sans
 ### Code Challenge: React Components and Object Destructuring
 
 - [code challenge](learn/codeChallenges/03week/01reactCompObjDest/index.js)
+
+### Code Challenge: Lifting State Up & Functional ComponentsForum
+
+- [code challenge](learn/codeChallenges/03week/02liftingStateFunComps/index.js)
