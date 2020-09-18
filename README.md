@@ -164,3 +164,5 @@ $ npm i react-router-dom@5.2.0
 - Update the [Header.js](src/components/Header.js) component.
 - Update the [Footer.js](src/components/Footer.js) component.
 - Update the [Directory.js](src/components/Directory.js) component.
+
+### Exercise: Adding to the Single Page App
