@@ -177,3 +177,6 @@ $ npm i react-router-dom@5.2.0
 - Update [Home.js](src/components/Home.js)
 
 ### Exercise: React Router Parameters
+
+- Update the [Directory.js](src/components/Directory.js)
+- Update [Main.js](src/components/Main.js)
