@@ -180,5 +180,6 @@ $ npm i react-router-dom@5.2.0
 
 - Update the [Directory.js](src/components/Directory.js)
 - Update [Main.js](src/components/Main.js)
+- Update [CampsiteInfo.js](src/components/CampsiteInfo.js)
 
 ### Exercise: Breadcrumbs
