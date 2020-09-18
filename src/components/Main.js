@@ -3,7 +3,6 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Directory from "./Directory";
 import Contact from "./Contact";
-import CampsiteInfo from "./CampsiteInfo";
 
 import Home from "./Home";
 import { Switch, Route, Redirect } from "react-router-dom";
