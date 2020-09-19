@@ -3,14 +3,26 @@ const { HashRouter, Switch, Route, Link } = ReactRouterDOM;
 const ALBUMSDATA = [
   {
     id: 1,
+    title: "One Week",
+    artist: "Barenaked Ladies",
+    year: 1998,
+  },
+  {
+    id: 2,
     title: "Mezzanine",
     artist: "Massive Attack",
     year: 1998,
   },
   {
-    id: 2,
+    id: 3,
     title: "The Ruminant Band",
     artist: "Fruit Bats",
+    year: 2009,
+  },
+  {
+    id: 4,
+    title: "21 Guns",
+    artist: "Green Day",
     year: 2009,
   },
 ];
@@ -34,6 +46,23 @@ function Albums(props) {
   );
 }
 
+function Years(props) {
+  let years = props.albumsData.map((album) => {
+    return album.year;
+  });
+  years = [...new Set(years)];
+  return (
+    <div>
+      <h1>Years</h1>
+      {years.map((year, i) => (
+        <li key={i}>
+          <Link to={`/years/${year}`}>{year}</Link>
+        </li>
+      ))}
+    </div>
+  );
+}
+
 function MyNav() {
   return (
     <ul>
@@ -42,6 +71,9 @@ function MyNav() {
       </li>
       <li>
         <Link to="/albums">Albums</Link>
+      </li>
+      <li>
+        <Link to="/years">Years</Link>
       </li>
     </ul>
   );
@@ -56,13 +88,33 @@ class Main extends React.Component {
   }
 
   render() {
-    const AlbumInfo = ({ match }) => {
+    const AlbumInfo = (props) => {
+      console.log(props);
       const album = this.state.albumsData.filter(
-        (album) => album.id === +match.params.albumId
+        (album) => album.id === +props.match.params.albumId
       )[0];
       return (
         <div>
           {album.title} - {album.artist} - {album.year}
+        </div>
+      );
+    };
+
+    const YearInfo = (props) => {
+      console.log(props);
+      const albums = this.state.albumsData.filter(
+        (album) => album.year === +props.match.params.year
+      );
+      console.log(albums);
+      return (
+        <div>
+          {albums.map((album) => {
+            return (
+              <li>
+                {album.title} - {album.artist}
+              </li>
+            );
+          })}
         </div>
       );
     };
@@ -76,6 +128,12 @@ class Main extends React.Component {
           path="/albums"
           render={() => <Albums albumsData={this.state.albumsData} />}
         />
+        <Route
+          exact
+          path="/years"
+          render={() => <Years albumsData={this.state.albumsData} />}
+        />
+        <Route path="/years/:year" component={YearInfo} />
       </Switch>
     );
   }
