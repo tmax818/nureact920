@@ -196,4 +196,5 @@ $ npm i react-router-dom@5.2.0
 
 #### Task 1
 
--
+- Add [About.js](src/components/About.js)
+- Update [Main.js](src/components/Main.js)
