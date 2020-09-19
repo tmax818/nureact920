@@ -2,12 +2,6 @@ const { HashRouter, Switch, Route, Link } = ReactRouterDOM;
 
 const ALBUMSDATA = [
   {
-    id: 1,
-    title: "One Week",
-    artist: "Barenaked Ladies",
-    year: 1998,
-  },
-  {
     id: 2,
     title: "Mezzanine",
     artist: "Massive Attack",
@@ -17,12 +11,6 @@ const ALBUMSDATA = [
     id: 3,
     title: "The Ruminant Band",
     artist: "Fruit Bats",
-    year: 2009,
-  },
-  {
-    id: 4,
-    title: "21 Guns",
-    artist: "Green Day",
     year: 2009,
   },
 ];
@@ -47,16 +35,12 @@ function Albums(props) {
 }
 
 function Years(props) {
-  let years = props.albumsData.map((album) => {
-    return album.year;
-  });
-  years = [...new Set(years)];
   return (
     <div>
       <h1>Years</h1>
-      {years.map((year, i) => (
-        <li key={i}>
-          <Link to={`/years/${year}`}>{year}</Link>
+      {props.albumsData.map((album) => (
+        <li key={album.id}>
+          <Link to={`/years/${album.year}`}>{album.year}</Link>
         </li>
       ))}
     </div>
