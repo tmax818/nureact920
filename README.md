@@ -191,3 +191,9 @@ $ npm i react-router-dom@5.2.0
 ### Code Challenge: React Router Params
 
 - [code challenge](learn/codeChallenges/03week/03reactRouterParams/index.js)
+
+### Workshop
+
+#### Task 1
+
+-
