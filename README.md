@@ -121,5 +121,5 @@ $ npm i typeface-lobster typeface-open-sans
 ### Exercise: Presentational and Container Components
 
 - Add [Main.js](src/components/Main.js)
-- Update [App.js](src/components/App.js)
+- Update [App.js](src/App.js)
 - Update [Directory.js](src/components/Directory.js)
