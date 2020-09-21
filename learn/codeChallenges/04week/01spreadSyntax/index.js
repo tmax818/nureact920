@@ -4,6 +4,8 @@ const modernPhilosophers = ["Allan Gibbard", "Susan Haack", "Judith Butler"];
 
 const philosophers = [
   /* your code here */
+  ...ancientGreekPhilosophers,
+  ...modernPhilosophers,
 ];
 console.log(philosophers);
 
@@ -13,6 +15,8 @@ const studentToAdd = { name: "Krystal" };
 
 const newStudents = [
   /* your code here */
+  ...STUDENTS,
+  studentToAdd,
 ];
 console.log(newStudents);
 
@@ -25,5 +29,7 @@ const reactCourse = {
 
 const reactCourseUpdated = {
   /* your code here */
+  ...reactCourse,
+  students: newStudents,
 };
 console.log(reactCourseUpdated);
