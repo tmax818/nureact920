@@ -239,3 +239,5 @@ $ npm i redux@4.0.5 react-redux@7.2.0
 - Create [configureStore.js](src/redux/configureStore.js)
 - Update [App.js](src/App.js)
 - Update [Main.js](src/components/Main.js)
+
+### Exercise: React Redux Form
