@@ -220,3 +220,7 @@ $ npm i react-router-dom@5.2.0
 ### Exercise: Controlled Form Validation
 
 - Update [Contact.js](src/components/Contact.js)
+
+### Exercise: Uncontrolled Forms
+
+- Update [Header.js](src/components/Header.js)
