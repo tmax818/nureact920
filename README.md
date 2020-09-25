@@ -224,3 +224,7 @@ $ npm i react-router-dom@5.2.0
 ### Exercise: Uncontrolled Forms
 
 - Update [Header.js](src/components/Header.js)
+
+### Code Challenge
+
+### Exercise: Introduction to Redux
