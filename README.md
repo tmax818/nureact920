@@ -218,3 +218,5 @@ $ npm i react-router-dom@5.2.0
 - Update [Contact.js](src/components/Contact.js)
 
 ### Exercise: Controlled Form Validation
+
+- Update [Contact.js](src/components/Contact.js)
