@@ -237,5 +237,5 @@ $ npm i redux@4.0.5 react-redux@7.2.0
 
 - Create [reducer.js](src/redux/reducer.js)
 - Create [configureStore.js](src/redux/configureStore.js)
-- Update [App.js](src/components/App.js)
+- Update [App.js](src/App.js)
 - Update [Main.js](src/components/Main.js)
