@@ -247,3 +247,5 @@ $ npm i redux@4.0.5 react-redux@7.2.0
 ```
 $ npm i react-redux-form@1.16.14
 ```
+
+- Update [Contact.js](src/components/Contact.js)
