@@ -1,4 +1,7 @@
-import React from "react";
+// Import Component so you can make a class component
+import React, { Component } from "react";
+// Import stuff from reactstrap
+import { Button } from "reactstrap";
 import {
   Card,
   CardImg,
@@ -8,6 +11,18 @@ import {
   BreadcrumbItem,
 } from "reactstrap";
 import { Link } from "react-router-dom";
+
+class CommentForm extends Component {
+  render() {
+    return (
+      <>
+        <Button outline>
+          <i className="fa fa-pencil" /> Submit Comment
+        </Button>
+      </>
+    );
+  }
+}
 
 function RenderCampsite({ campsite }) {
   return (
@@ -43,6 +58,7 @@ function RenderComments({ comments }) {
             </div>
           );
         })}
+        <CommentForm />
       </div>
     );
   }
