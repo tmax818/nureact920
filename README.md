@@ -251,3 +251,5 @@ $ npm i react-redux-form@1.16.14
 - Update [Contact.js](src/components/Contact.js)
 
 ### Exercise: React Redux Form Validation
+
+- Update [Contact.js](src/components/Contact.js)

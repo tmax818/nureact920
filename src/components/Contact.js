@@ -8,7 +8,7 @@ import {
   Row,
 } from "reactstrap";
 import { Link } from "react-router-dom";
-import { Control, LocalForm } from "react-redux-form";
+import { Control, LocalForm, Errors } from "react-redux-form";
 
 class Contact extends Component {
   constructor(props) {
