@@ -8,8 +8,14 @@ import {
   BreadcrumbItem,
   Button,
   Modal,
+  ModalHeader,
+  ModalBody,
+  Row,
+  Col,
+  Label,
 } from "reactstrap";
 import { Link } from "react-router-dom";
+import { LocalForm, Control } from "react-redux-form";
 
 class CommentForm extends Component {
   state = { isModalOpen: false };
@@ -20,12 +26,34 @@ class CommentForm extends Component {
   render() {
     return (
       <>
-        <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
-          hi
-        </Modal>
         <Button outline onClick={this.toggleModal}>
           <i className="fa fa-pencil" /> Submit Comment
         </Button>
+        <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
+          <ModalHeader toggle={this.toggleModal}>Submit Comment</ModalHeader>
+          <ModalBody>
+            <LocalForm inSubmit={console.log("hi")}>
+              <Col md={5}>
+                <Label htmlFor="rating" md={10}>
+                  Rating
+                </Label>
+                <Control.select
+                  model=".rating"
+                  id="rating"
+                  name="rating"
+                  placeholder="rating"
+                  className="form-control"
+                >
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </Control.select>
+              </Col>
+            </LocalForm>
+          </ModalBody>
+        </Modal>
       </>
     );
   }
