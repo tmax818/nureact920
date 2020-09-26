@@ -1,7 +1,4 @@
-// Import Component so you can make a class component
 import React, { Component } from "react";
-// Import stuff from reactstrap
-import { Button } from "reactstrap";
 import {
   Card,
   CardImg,
@@ -9,14 +6,24 @@ import {
   CardBody,
   Breadcrumb,
   BreadcrumbItem,
+  Button,
+  Modal,
 } from "reactstrap";
 import { Link } from "react-router-dom";
 
 class CommentForm extends Component {
+  state = { isModalOpen: false };
+
+  toggleModal = () => {
+    this.setState({ isModalOpen: !this.state.isModalOpen });
+  };
   render() {
     return (
       <>
-        <Button outline>
+        <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
+          hi
+        </Modal>
+        <Button outline onClick={this.toggleModal}>
           <i className="fa fa-pencil" /> Submit Comment
         </Button>
       </>
