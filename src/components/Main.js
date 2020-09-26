@@ -9,12 +9,6 @@ import Home from "./Home";
 import { Switch, Route, Redirect, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 
-//take these out
-// import { CAMPSITES } from "../shared/campsites";
-// import { COMMENTS } from "../shared/comments";
-// import { PARTNERS } from "../shared/partners";
-// import { PROMOTIONS } from "../shared/promotions";
-
 const mapStateToProps = (state) => {
   return {
     campsites: state.campsites,
@@ -25,16 +19,6 @@ const mapStateToProps = (state) => {
 };
 
 class Main extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     campsites: CAMPSITES,
-  //     comments: COMMENTS,
-  //     partners: PARTNERS,
-  //     promotions: PROMOTIONS,
-  //   };
-  // }
-
   render() {
     const HomePage = () => {
       return (

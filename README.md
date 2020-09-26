@@ -241,3 +241,9 @@ $ npm i redux@4.0.5 react-redux@7.2.0
 - Update [Main.js](src/components/Main.js)
 
 ### Exercise: React Redux Form
+
+- Install:
+
+```
+$ npm i react-redux-form@1.16.14
+```
