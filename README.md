@@ -265,3 +265,5 @@ $ npm i react-redux-form@1.16.14
 - Update [CampsiteInfo.js](src/components/CampsiteInfo.js)
 
 #### Task 3
+
+- Update [CampsiteInfo.js](src/components/CampsiteInfo.js)
