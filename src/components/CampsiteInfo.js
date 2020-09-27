@@ -23,6 +23,11 @@ class CommentForm extends Component {
   toggleModal = () => {
     this.setState({ isModalOpen: !this.state.isModalOpen });
   };
+
+  handleSubmit(values) {
+    console.log("Current state is: " + JSON.stringify(values));
+    alert("Current state is: " + JSON.stringify(values));
+  }
   render() {
     return (
       <>
@@ -32,11 +37,11 @@ class CommentForm extends Component {
         <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
           <ModalHeader toggle={this.toggleModal}>Submit Comment</ModalHeader>
           <ModalBody>
-            <LocalForm inSubmit={console.log("hi")}>
-              <Col md={5}>
-                <Label htmlFor="rating" md={10}>
-                  Rating
-                </Label>
+            <LocalForm onSubmit={(values) => this.handleSubmit(values)}>
+              <Label htmlFor="rating" md={12}>
+                Rating
+              </Label>
+              <Col md={12}>
                 <Control.select
                   model=".rating"
                   id="rating"
@@ -50,6 +55,34 @@ class CommentForm extends Component {
                   <option value="4">4</option>
                   <option value="5">5</option>
                 </Control.select>
+              </Col>
+              <Label htmlFor="author" md={12}>
+                Author
+              </Label>
+              <Col>
+                <Control.text
+                  model=".author"
+                  id="author"
+                  name="author"
+                  placeholder="Your Name"
+                  className="form-control"
+                />
+              </Col>
+              <Col>
+                <Label htmlFor="text">Comment</Label>
+                <Control.textarea
+                  model=".text"
+                  id="text"
+                  name="text"
+                  placeholder=""
+                  className="form-control"
+                  rows={6}
+                />
+              </Col>
+              <Col>
+                <Button type="submit" value="submit" color="primary">
+                  Submit Comment
+                </Button>
               </Col>
             </LocalForm>
           </ModalBody>
