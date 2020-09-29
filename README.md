@@ -267,3 +267,5 @@ $ npm i react-redux-form@1.16.14
 #### Task 3
 
 - Update [CampsiteInfo.js](src/components/CampsiteInfo.js)
+
+### Exercise: Splitting and Combining Reducers
