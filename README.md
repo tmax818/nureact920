@@ -276,3 +276,11 @@ $ npm i react-redux-form@1.16.14
 - Create [promotions.js](src/redux/promotions.js)
 - Update [configureStore.js](src/redux/configureStore.js)
 - Delete [reducers.js](src/redux/reducer.js)
+
+### Exercise: Redux Actions
+
+- Create [ActionTypes.js](src/redux/ActionTypes.js)
+- Create [ActionCreators.js](src/redux/ActionCreators.js)
+- Update [comments.js](src/redux/comments.js)
+- Update [Main.js](src/components/Main.js)
+- Update [CampsiteInfo.js](src/components/CampsiteInfo.js)
