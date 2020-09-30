@@ -297,3 +297,8 @@ $ npm i redux-thunk@2.3.0 redux-logger@3.0.6
 - Update [ActionTypes.js](src/redux/ActionTypes.js)
 - Update [ActionCreators.js](src/redux/ActionCreators.js)
 - Update [campsites.js](src/redux/campsites.js)
+- Create [LoadingComponent.js](src/components/LoadingComponent.js)
+- Update [Main.js](src/components/Main.js)
+- Update [CampsiteInfo.js](src/components/CampsiteInfo.js)
+- Update [Home.js](src/components/Home.js)
+- Update [Directory.js](src/components/Directory.js)
