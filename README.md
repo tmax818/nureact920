@@ -287,4 +287,13 @@ $ npm i react-redux-form@1.16.14
 
 ### Exercise: Redux Thunk
 
-- new branch
+- Install:
+
+```bash
+$ npm i redux-thunk@2.3.0 redux-logger@3.0.6
+```
+
+- Update [configureStore.js](src/redux/configureStore.js)
+- Update [ActionTypes.js](src/redux/ActionTypes.js)
+- Update [ActionCreators.js](src/redux/ActionCreators.js)
+- Update [campsites.js](src/redux/campsites.js)
