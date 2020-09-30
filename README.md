@@ -284,3 +284,7 @@ $ npm i react-redux-form@1.16.14
 - Update [comments.js](src/redux/comments.js)
 - Update [Main.js](src/components/Main.js)
 - Update [CampsiteInfo.js](src/components/CampsiteInfo.js)
+
+### Exercise: Redux Thunk
+
+- new branch
