@@ -306,3 +306,6 @@ $ npm i redux-thunk@2.3.0 redux-logger@3.0.6
 ### Exercise: React-Redux-Form Revisited
 
 - Create [forms.js](src/redux/forms.js)
+- Update [configureStore.js](src/redux/configureStore.js)
+- Update [Main.js](src/components/Main.js)
+- Update [Contact.js](src/components/Contact.js)
