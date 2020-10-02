@@ -1,6 +1,7 @@
 import * as ActionTypes from "./ActionTypes";
 import { baseUrl } from "../shared/baseUrl";
 
+// Helper Functions
 const res = (response) => {
   if (response.ok) {
     return response;
@@ -17,39 +18,42 @@ const err = (error) => {
   throw errMess;
 };
 
-export const addComment = (campsiteId, rating, author, text) => ({
+//COMMENTS
+
+export const addComments = (comments) => ({
+  type: ActionTypes.ADD_COMMENTS,
+  payload: comments,
+});
+
+export const addComment = (comment) => ({
   type: ActionTypes.ADD_COMMENT,
-  payload: {
+  payload: comment,
+});
+
+export const postComment = (campsiteId, rating, author, text) => (dispatch) => {
+  const newComment = {
     campsiteId: campsiteId,
     rating: rating,
     author: author,
     text: text,
-  },
-});
+  };
+  newComment.date = new Date().toISOString();
 
-export const fetchCampsites = () => (dispatch) => {
-  dispatch(campsitesLoading());
-
-  return fetch(baseUrl + "campsites")
+  return fetch(baseUrl + "comments", {
+    method: "POST",
+    body: JSON.stringify(newComment),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
     .then(res, err)
     .then((response) => response.json())
-    .then((campsites) => dispatch(addCampsites(campsites)))
-    .catch((error) => dispatch(campsitesFailed(error.message)));
+    .then((response) => dispatch(addComment(response)))
+    .catch((error) => {
+      console.log("post comment", error.message);
+      alert("Your comment could not be posted\nError: " + error.message);
+    });
 };
-
-export const campsitesLoading = () => ({
-  type: ActionTypes.CAMPSITES_LOADING,
-});
-
-export const campsitesFailed = (errMess) => ({
-  type: ActionTypes.CAMPSITES_FAILED,
-  payload: errMess,
-});
-
-export const addCampsites = (campsites) => ({
-  type: ActionTypes.ADD_CAMPSITES,
-  payload: campsites,
-});
 
 export const fetchComments = () => (dispatch) => {
   return fetch(baseUrl + "comments")
@@ -63,10 +67,33 @@ export const commentsFailed = (errMess) => ({
   payload: errMess,
 });
 
-export const addComments = (comments) => ({
-  type: ActionTypes.ADD_COMMENTS,
-  payload: comments,
+// CAMPSITES
+
+export const fetchCampsites = () => (dispatch) => {
+  dispatch(campsitesLoading());
+
+  return fetch(baseUrl + "campsites")
+    .then(res, err)
+    .then((response) => response.json())
+    .then((campsites) => dispatch(addCampsites(campsites)))
+    .catch((error) => dispatch(campsitesFailed(error.message)));
+};
+
+export const campsitesFailed = (errMess) => ({
+  type: ActionTypes.CAMPSITES_FAILED,
+  payload: errMess,
 });
+
+export const campsitesLoading = () => ({
+  type: ActionTypes.CAMPSITES_LOADING,
+});
+
+export const addCampsites = (campsites) => ({
+  type: ActionTypes.ADD_CAMPSITES,
+  payload: campsites,
+});
+
+// PROMOTIONS
 
 export const fetchPromotions = () => (dispatch) => {
   dispatch(promotionsLoading());

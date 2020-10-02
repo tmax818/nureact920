@@ -18,6 +18,7 @@ import { actions } from "react-redux-form";
 
 // Actions
 import {
+  postComment,
   addComment,
   fetchCampsites,
   fetchComments,
@@ -40,6 +41,8 @@ const mapDispatchToProps = {
   resetFeedbackForm: () => actions.reset("feedbackForm"),
   fetchComments: () => fetchComments(),
   fetchPromotions: () => fetchPromotions(),
+  postComment: (campsiteId, rating, author, text) =>
+    postComment(campsiteId, rating, author, text),
 };
 
 class Main extends Component {
@@ -87,6 +90,7 @@ class Main extends Component {
           )}
           commentsErrMess={this.props.comments.errMess}
           addComment={this.props.addComment}
+          postComment={this.props.postComment}
         />
       );
     };
