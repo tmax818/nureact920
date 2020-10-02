@@ -328,3 +328,9 @@ $ npm i json-server -g
 - start server and app
 - Create [baseUrl](src/shared/baseUrl.js)
 - Update [ActionTypes.js](src/redux/ActionTypes.js)
+- Update [ActionCreators.js](src/redux/ActionCreators.js)
+- Update [promotions.js](src/redux/promotions.js)
+- Update [comments.js](src/redux/comments.js)
+- Update [Main.js](src/components/Main.js)
+- Update [Directory.js](src/components/Directory.js)
+- Update [Home.js](src/components/Home.js)
