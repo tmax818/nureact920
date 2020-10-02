@@ -322,3 +322,9 @@ $ npm i json-server -g
 - Create [public](../json-server/public/keep.txt) folder
 
 - Add images to the [public](../json-server/public/keep.txt) folder
+
+### Exercise: Fetch from Server
+
+- start server and app
+- Create [baseUrl](src/shared/baseUrl.js)
+- Update [ActionTypes.js](src/redux/ActionTypes.js)
