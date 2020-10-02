@@ -302,3 +302,7 @@ $ npm i redux-thunk@2.3.0 redux-logger@3.0.6
 - Update [CampsiteInfo.js](src/components/CampsiteInfo.js)
 - Update [Home.js](src/components/Home.js)
 - Update [Directory.js](src/components/Directory.js)
+
+### Exercise: React-Redux-Form Revisited
+
+- Create [forms.js](src/redux/forms.js)
