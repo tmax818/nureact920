@@ -9,12 +9,18 @@ import {
 } from "reactstrap";
 import { Link } from "react-router-dom";
 import { Loading } from "./LoadingComponent";
+import { baseUrl } from "../shared/baseUrl";
 
 function RenderDirectoryItem({ campsite }) {
+  console.log(campsite);
   return (
     <Card>
       <Link to={`/directory/${campsite.id}`}>
-        <CardImg width="100%" src={campsite.image} alt={campsite.name} />
+        <CardImg
+          width="100%"
+          src={baseUrl + campsite.image}
+          alt={campsite.name}
+        />
         <CardImgOverlay>
           <CardTitle>{campsite.name}</CardTitle>
         </CardImgOverlay>
@@ -24,6 +30,7 @@ function RenderDirectoryItem({ campsite }) {
 }
 
 function Directory(props) {
+  console.log(props);
   const directory = props.campsites.campsites.map((campsite) => {
     return (
       <div key={campsite.id} className="col-md-5 m-1">
