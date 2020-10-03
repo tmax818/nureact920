@@ -334,3 +334,15 @@ $ npm i json-server -g
 - Update [Main.js](src/components/Main.js)
 - Update [Directory.js](src/components/Directory.js)
 - Update [Home.js](src/components/Home.js)
+
+### Workshop
+
+#### Task 1
+
+- Update [ActionTypes.js](src/redux/ActionTypes.js)
+- Update [ActionCreators.js](src/redux/ActionCreators.js)
+- Update [partners.js](src/redux/partners.js)
+- Update [Main.js](src/components/Main.js)
+- Update [Home.js](src/components/Home.js)
+- Update [About.js](src/components/About.js)
+-
