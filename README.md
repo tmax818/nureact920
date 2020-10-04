@@ -349,3 +349,4 @@ $ npm i json-server -g
 #### Task 2
 
 - Update [ActionTypes.js](src/redux/ActionTypes.js)
+- Update [Main.js](src/components/Main.js)
