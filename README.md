@@ -345,4 +345,7 @@ $ npm i json-server -g
 - Update [Main.js](src/components/Main.js)
 - Update [Home.js](src/components/Home.js)
 - Update [About.js](src/components/About.js)
--
+
+#### Task 2
+
+- Update [ActionTypes.js](src/redux/ActionTypes.js)
