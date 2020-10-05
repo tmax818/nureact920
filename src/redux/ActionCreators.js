@@ -118,3 +118,29 @@ export const addPromotions = (promotions) => ({
   type: ActionTypes.ADD_PROMOTIONS,
   payload: promotions,
 });
+
+//PARTNERS
+
+export const fetchPartners = () => (dispatch) => {
+  dispatch(partnersLoading());
+
+  return fetch(baseUrl + "partners")
+    .then(res, err)
+    .then((response) => response.json())
+    .then((partners) => dispatch(addPartners(partners)))
+    .catch((error) => dispatch(partnersFailed(error.message)));
+};
+
+export const partnersLoading = () => ({
+  type: ActionTypes.PARTNERS_LOADING,
+});
+
+export const partnersFailed = (errMess) => ({
+  type: ActionTypes.PARTNERS_FAILED,
+  payload: errMess,
+});
+
+export const addPartners = (partners) => ({
+  type: ActionTypes.ADD_PARTNERS,
+  payload: partners,
+});

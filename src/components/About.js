@@ -7,13 +7,42 @@ import {
   CardHeader,
   Media,
 } from "reactstrap";
+import { Loading } from "./LoadingComponent";
 import { Link } from "react-router-dom";
+import { baseUrl } from "../shared/baseUrl";
+
+function PartnerList(props) {
+  console.log(props.partners);
+  const partners = props.partners.partners.map((partner) => {
+    return (
+      <Media tag="li" key={partner.id}>
+        <RenderPartner partner={partner} />
+      </Media>
+    );
+  });
+  if (props.partners.isLoading) {
+    return <Loading />;
+  }
+  if (props.partners.errMess) {
+    return <h4>{(props.partners.isLoading, props.partners.errMess)}</h4>;
+  }
+  return (
+    <div className="col mt-4">
+      <Media list>{partners}</Media>
+    </div>
+  );
+}
 
 function RenderPartner({ partner }) {
   if (partner) {
     return (
       <React.Fragment>
-        <Media object src={partner.image} alt={partner.name} width="150" />
+        <Media
+          object
+          src={baseUrl + partner.image}
+          alt={partner.name}
+          width="150"
+        />
         <Media body className="ml-5 mb-4">
           <Media heading>{partner.name}</Media>
           {partner.description}
@@ -25,14 +54,6 @@ function RenderPartner({ partner }) {
 }
 
 function About(props) {
-  const partners = props.partners.map((partner) => {
-    return (
-      <Media tag="li" key={partner.id}>
-        <RenderPartner partner={partner} />
-      </Media>
-    );
-  });
-
   return (
     <div className="container">
       <div className="row">
@@ -103,7 +124,9 @@ function About(props) {
           <h3>Community Partners</h3>
         </div>
         <div className="col mt-4">
-          <Media list>{partners}</Media>
+          <Media list>
+            <PartnerList partners={props.partners} />
+          </Media>
         </div>
       </div>
     </div>
