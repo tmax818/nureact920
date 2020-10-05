@@ -144,3 +144,19 @@ export const addPartners = (partners) => ({
   type: ActionTypes.ADD_PARTNERS,
   payload: partners,
 });
+
+export const postFeedback = (feedback) => (dispatch) => {
+  return fetch(baseUrl + "comments", {
+    method: "POST",
+    body: JSON.stringify(feedback),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => response.json())
+
+    .catch((error) => {
+      console.log("post comment", error.message);
+      alert("Your comment could not be posted\nError: " + error.message);
+    });
+};
