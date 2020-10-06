@@ -1,36 +1,10 @@
 import React from "react";
-import {
-  Card,
-  CardImg,
-  CardImgOverlay,
-  CardTitle,
-  Breadcrumb,
-  BreadcrumbItem,
-} from "reactstrap";
+import { Breadcrumb, BreadcrumbItem } from "reactstrap";
 import { Link } from "react-router-dom";
 import { Loading } from "./LoadingComponent";
-import { baseUrl } from "../shared/baseUrl";
+import RenderDirectoryItem from "./RenderDirectoryItem";
 
-function RenderDirectoryItem({ campsite }) {
-  console.log(campsite);
-  return (
-    <Card>
-      <Link to={`/directory/${campsite.id}`}>
-        <CardImg
-          width="100%"
-          src={baseUrl + campsite.image}
-          alt={campsite.name}
-        />
-        <CardImgOverlay>
-          <CardTitle>{campsite.name}</CardTitle>
-        </CardImgOverlay>
-      </Link>
-    </Card>
-  );
-}
-
-function Directory(props) {
-  console.log(props);
+const Directory = (props) => {
   const directory = props.campsites.campsites.map((campsite) => {
     return (
       <div key={campsite.id} className="col-md-5 m-1">
@@ -76,6 +50,6 @@ function Directory(props) {
       <div className="row">{directory}</div>
     </div>
   );
-}
+};
 
 export default Directory;

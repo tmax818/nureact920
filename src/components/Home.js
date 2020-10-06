@@ -2,7 +2,6 @@ import React from "react";
 import RenderCard from "./RenderCard";
 
 const Home = (props) => {
-  console.log(props);
   return (
     <div className="container">
       <div className="row">
