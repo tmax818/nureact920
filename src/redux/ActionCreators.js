@@ -146,7 +146,7 @@ export const addPartners = (partners) => ({
 });
 
 export const postFeedback = (feedback) => (dispatch) => {
-  return fetch(baseUrl + "comments", {
+  return fetch(baseUrl + "feedback", {
     method: "POST",
     body: JSON.stringify(feedback),
     headers: {
