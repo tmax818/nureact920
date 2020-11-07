@@ -19,10 +19,12 @@ import { actions } from "react-redux-form";
 // Actions
 import {
   postComment,
+  postFeedback,
   addComment,
   fetchCampsites,
   fetchComments,
   fetchPromotions,
+  fetchPartners,
 } from "../redux/ActionCreators";
 
 const mapStateToProps = (state) => {
@@ -41,18 +43,24 @@ const mapDispatchToProps = {
   resetFeedbackForm: () => actions.reset("feedbackForm"),
   fetchComments: () => fetchComments(),
   fetchPromotions: () => fetchPromotions(),
+  fetchPartners: () => fetchPartners(),
   postComment: (campsiteId, rating, author, text) =>
     postComment(campsiteId, rating, author, text),
+  postFeedback: (feedback) => postFeedback(feedback)
 };
+
 
 class Main extends Component {
   componentDidMount() {
     this.props.fetchCampsites();
     this.props.fetchComments();
     this.props.fetchPromotions();
+    this.props.fetchPartners();
+
   }
 
   render() {
+    console.log(this.props.partners)
     const HomePage = () => {
       return (
         <Home
@@ -70,7 +78,9 @@ class Main extends Component {
           }
           promotionLoading={this.props.promotions.isLoading}
           promotionErrMess={this.props.promotions.errMess}
-          partner={this.props.partners.filter((partner) => partner.featured)[0]}
+          partner={this.props.partners.partners.filter((partner) => partner.featured)[0]}
+          partnerLoading={this.props.partners.isLoading}
+          partnerErrMess={this.props.partners.errMess}
         />
       );
     };
@@ -109,7 +119,7 @@ class Main extends Component {
             exact
             path="/contactus"
             render={() => (
-              <Contact resetFeedbackForm={this.props.resetFeedbackForm} />
+              <Contact resetFeedbackForm={this.props.resetFeedbackForm} postFeedback={this.props.postFeedback}/>
             )}
           />
           <Route path="/directory/:campsiteId" component={CampsiteWithId} />
