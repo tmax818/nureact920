@@ -40,7 +40,6 @@ function App() {
       <Games />
       <hr />
       <Challenge />
-      <Resources />
     </div>
   );
 }
@@ -122,42 +121,6 @@ function Challenge() {
   );
 }
 
-function RenderResource({ resource }) {
-  console.log(resource);
-  return (
-    <strong>
-      <a href={resource.url} target="_blank">
-        {resource.title}
-      </a>
-    </strong>
-  );
-}
 
-class Resources extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      resources: RESOURCES,
-    };
-  }
-
-  render() {
-    const resourcesList = this.state.resources.map((resource) => {
-      return (
-        <li key={resource.id}>
-          <RenderResource resource={resource} />
-        </li>
-      );
-    });
-
-    return (
-      <div>
-        <h2>Additional Resources</h2>
-        <ul>{resourcesList}</ul>
-      </div>
-    );
-  }
-}
 
 ReactDOM.render(<App />, document.getElementById("root"));
