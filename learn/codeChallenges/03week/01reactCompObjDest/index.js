@@ -40,6 +40,7 @@ function App() {
       <Games />
       <hr />
       <Challenge />
+    <Resources/>
     </div>
   );
 }
@@ -48,37 +49,38 @@ function PageTitle() {
   return <h1>Code Challenge: React Components and Object Destructuring</h1>;
 }
 
-class Games extends React.Component {
+class Resources extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      games: GAMES,
+      resources: RESOURCES,
     };
   }
 
   render() {
-    const gamesList = this.state.games.map((game) => {
+    const resourceList = this.state.resources.map((resource) => {
       return (
-        <li key={game.id}>
-          <RenderGame game={game} />
+        <li key={resource.id}>
+          <RenderResouce resource={resource} />
         </li>
       );
     });
 
     return (
       <div>
-        <h2>Available Games</h2>
-        <ul>{gamesList}</ul>
+        <h2>Available Resouce</h2>
+        <ul>{resourceList}</ul>
       </div>
     );
   }
 }
 
-function RenderGame(props) {
+function RenderResouce({resource}) {
+  
   return (
     <strong>
-      Game ID {props.game.id}: {props.game.name}
+      Game ID {resource.id}: {resource.title}
     </strong>
   );
 }
@@ -121,6 +123,45 @@ function Challenge() {
   );
 }
 
+class Games extends React.Component {
+  constructor(props) {
+    super(props);
 
+    this.state = {
+      games: GAMES,
+    };
+  }
+
+  render() {
+    const gamesList = this.state.games.map((game) => {
+      return (
+        <li key={game.id}>
+          <RenderGame game={game} />
+        </li>
+      );
+    });
+
+    return (
+      <div>
+        <h2>Available Games</h2>
+        <ul>{gamesList}</ul>
+      </div>
+    );
+  }
+}
+
+function RenderGame(props) {
+  return (
+    <strong>
+      Game ID {props.game.id}: {props.game.name}
+    </strong>
+  );
+}
 
 ReactDOM.render(<App />, document.getElementById("root"));
+
+const props = {name: "Tyler", age: 39}
+
+const {name, age} = props
+
+console.log(age)
