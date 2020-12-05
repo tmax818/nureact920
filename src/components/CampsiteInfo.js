@@ -1,7 +1,6 @@
 // Import Component so you can make a class component
 import React, { Component } from "react";
 // Import stuff from reactstrap
-import { Button } from "reactstrap";
 import {
   Card,
   CardImg,
@@ -9,6 +8,7 @@ import {
   CardBody,
   Breadcrumb,
   BreadcrumbItem,
+  Button
 } from "reactstrap";
 import { Link } from "react-router-dom";
 
