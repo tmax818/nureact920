@@ -4,6 +4,11 @@
 //   return { studentName: name };
 // }
 
-const hello = (name) => ({ studentName: name });
+const hello = name => ({studentName: name})
 
-module.exports = hello;
+
+console.log(hello("Sean"))
+
+// const hello = (name) => ({ studentName: name });
+
+// module.exports = hello;
