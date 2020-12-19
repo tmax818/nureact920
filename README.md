@@ -4,12 +4,12 @@
 
 ## Week 1 Prerequisites - JavaScript
 
-- [template literals](codeChallenges/01week/01temp-lit/app.js)
-- [objects](codeChallenges/01week/02objects/app.js)
-- [class inheritance](codeChallenges/01week/03class-inheritance/app.js)
-- [Map](codeChallenges/01week/04map/app.js)
-- [Filter](codeChallenges/01week/05filter/app.js)
-- [Reduce](codeChallenges/01week/06reduce/app.js)
+- [template literals](learn/codeChallenges/01week/01temp-lit/app.js)
+- [objects](learn/codeChallenges/01week/02objects/app.js)
+- [class inheritance](learn/codeChallenges/01week/03class-inheritance/app.js)
+- [Map](learn/codeChallenges/01week/04map/app.js)
+- [Filter](learn/codeChallenges/01week/05filter/app.js)
+- [Reduce](learn/codeChallenges/01week/06reduce/app.js)
 
 ### Workshop
 
