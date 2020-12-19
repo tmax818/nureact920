@@ -24,6 +24,7 @@ import {
   fetchComments,
   fetchPromotions,
   fetchPartners,
+  postFeedback
 } from "../redux/ActionCreators";
 
 const mapStateToProps = (state) => {
@@ -45,6 +46,7 @@ const mapDispatchToProps = {
   fetchPartners: () => fetchPartners(),
   postComment: (campsiteId, rating, author, text) =>
     postComment(campsiteId, rating, author, text),
+  postFeedback: (feedback) => postFeedback(feedback)
 };
 
 class Main extends Component {
@@ -119,7 +121,7 @@ class Main extends Component {
             exact
             path="/contactus"
             render={() => (
-              <Contact resetFeedbackForm={this.props.resetFeedbackForm} />
+              <Contact resetFeedbackForm={this.props.resetFeedbackForm} postFeedback={this.props.postFeedback} />
             )}
           />
           <Route path="/directory/:campsiteId" component={CampsiteWithId} />
