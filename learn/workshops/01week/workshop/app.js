@@ -1,32 +1,44 @@
-//Create two classes: Student and Bootcamp
 
 class Student {
-  constructor(name, email, community) {
-    this.name = name;
-    this.email = email;
-    this.community = community;
+  constructor(name, email, community){
+    this.name = name
+    this.email = email
+    this.community = community
   }
 }
+
+const stud1 = new Student("Mike", "mikeman@aol.com", "Tacoma")
+const stud2 = new Student("Tyler", "tdog@aol.com", "LA")
+
 
 class Bootcamp {
-  constructor(name, level, students = []) {
-    this.name = name;
-    this.level = level;
-    this.students = students;
+  constructor(name, level, students = []){
+    this.name = name
+    this.level = level
+    this.students = students
   }
 
-  registerStudent(newStudent) {
-    const student = this.students.filter(
-      (student) => student.email === newStudent.email
-    );
-    if (student.length === 0) {
-      this.students.push(newStudent);
-      console.log(
-        `Registering ${newStudent.email} to the bootcamp; ${this.name}.`
-      );
+  registerStudent(newStudent){
+    //check if this.students array contains newStudent.email in any of the array's elements.
+    const dup = this.students.find(student => student.email === newStudent.email)
+    console.log(dup)
+    if(dup){
+      console.log("Sorry, s/he is already enrolled")
     } else {
-      console.log("already heard that one!!!");
+      this.students.push(newStudent)
     }
-    return this.students;
   }
 }
+
+const bootcamp = new Bootcamp("React", 5)
+
+// const nums = []
+
+// bootcamp.students = [
+//   {name: "mike", email: "mikeman@aol.com", community: "Tacoma"},
+//   {name: "tyler", email: "tdog@aol.com", community: "LA"}
+// ]
+
+// bootcamp.registerStudent(stud1 = {name: "mike", email: "mikeman@aol.com", community: "Tacoma"})
+
+// stud1.email === student.email
