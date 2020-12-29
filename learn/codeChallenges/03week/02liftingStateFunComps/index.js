@@ -1,16 +1,17 @@
-class App extends React.Component {
-  state = {
-    bootcampName: "Nucamp",
-  };
-
+class Welcome extends React.Component {
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      bootcampName: "Nucamp"
+    };
+  }
+  
   render() {
-    return <Welcome name={this.state.bootcampName} />;
+    return (
+      <h1>Welcome to {this.state.bootcampName}!</h1>
+    );
   }
 }
 
-const Welcome = ({ name }) => {
-  // console.log(props.name);
-  return <h1>Welcome to {name}!</h1>;
-};
-
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<Welcome />, document.getElementById('root'));
