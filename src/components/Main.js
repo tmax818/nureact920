@@ -39,17 +39,17 @@ class Main extends Component {
       );
     };
 
-    const CampsiteWithId = ({ match }) => {
-      console.log(match.params);
+    const CampsiteWithId = (props) => {
+      console.log(props)
       return (
         <CampsiteInfo
           campsite={
             this.state.campsites.filter(
-              (campsite) => campsite.id === +match.params.campsiteId
+              (campsite) => campsite.id === +props.match.params.campsiteId
             )[0]
           }
           comments={this.state.comments.filter(
-            (comment) => comment.campsiteId === +match.params.campsiteId
+            (comment) => comment.campsiteId === +props.match.params.campsiteId
           )}
         />
       );
