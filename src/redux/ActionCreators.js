@@ -151,7 +151,7 @@ export const postFeedback = (feedback) => (dispatch) => {
   const message = JSON.stringify(feedback);
   return fetch(baseUrl + "feedback", {
     method: "POST",
-    body: JSON.stringify(feedback),
+    body: message,
     headers: {
       "Content-Type": "application/json",
     },

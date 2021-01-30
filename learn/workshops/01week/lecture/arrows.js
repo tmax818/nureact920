@@ -1,9 +1,13 @@
 ////
 
 // function hello(name) {
-//   return { studentName: name };
+//     return { studentName: name };
 // }
 
-const hello = (name) => ({ studentName: name });
+const hello = name => {
+    console.log({ studentName: name })
+    return { studentName: name }
+}
 
-module.exports = hello;
+const value = hello("Jacob")
+
