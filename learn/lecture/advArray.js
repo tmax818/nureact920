@@ -5,10 +5,6 @@
 
 // const students = ["James", "Jose", "Katya", "Kelsey", "Sergey"];
 
-// const kstudents = students.filter(name => name[0] !== "S")
-
-// console.log(kstudents);
-
 // Map
 
 // takes a cb
@@ -16,18 +12,7 @@
 
 
 
-// const dnumbers = numbers.map(number => number * 2)
 
-// console.log(dnumbers)
-
-
-
-
-
-
-// const squared = numbers.map((number) => number ** 2);
-
-// console.log(squared);
 
 // Reduce
 

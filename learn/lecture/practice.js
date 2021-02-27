@@ -8,9 +8,5 @@ const bicycle = {
   },
 };
 
-console.log(bicycle.color)
-console.log(bicycle.electric)
-bicycle.color = "green"
-console.log(bicycle.color)
 
-module.exports = bicycle;
+
