@@ -5,11 +5,15 @@ class Book {
     this.year = year;
     this.isRead = isRead;
   }
+
+  showTitle() {
+    console.log(`the title is ${this.title}`)
+  }
 }
 
-const my_book = new Book("1984", "Orwell", 1949, "false")
-console.log(my_book)
-console.log(!!my_book.isRead)
+const my_book = new Book("1984", "Orwell", 1949)
+// console.log(my_book)
+// console.log(!!my_book.isRead)
 
 class Audiobook extends Book {
   constructor(title, author) {
@@ -21,7 +25,7 @@ class Audiobook extends Book {
   };
 }
 
-const my_audio = new Audiobook("Harry Potter", "JK")
-console.log(my_audio)
-my_audio.playAudio()
+// const my_audio = new Audiobook("Harry Potter", "JK")
+// console.log(my_audio)
+// my_audio.playAudio()
 // module.exports = { Book, Audiobook };

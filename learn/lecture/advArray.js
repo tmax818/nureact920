@@ -3,17 +3,32 @@
 /// takes a cb function
 /// returns an array
 
-// const students = ["James", "Jose", "Katya", "Kelsey", "Sergey"];
+const students = ["James", "Jose", "Katya", "Kelsey", "Sergey"];
+
+const newStudents = students.filter(student => student[0] !== "J")
+
+console.log(newStudents)
 
 // Map
 
 // takes a cb
 // returns an array
 
+const nums = [1, 2, 3, 4]
+
+const newNums = nums.map(num => num ** 2)
+
+console.log(newNums)
 
 
+const people = [
+    { name: "Joe", age: 34 },
+    { name: "Kathy", age: 24 },
+    { name: "Mike", age: 56 },
+]
 
-
+const peopleNames = people.map(person => person.name)
+console.log(peopleNames)
 // Reduce
 
 // takes a cb, "the reducer" and an initial value
