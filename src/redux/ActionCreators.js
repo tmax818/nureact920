@@ -145,13 +145,3 @@ export const addPartners = (partners) => ({
   payload: partners,
 });
 
-export const postFeedback = (feedback) => dispatch => {
-  const message = JSON.stringify(feedback);
-    return fetch(baseUrl + "feedback", {
-    method: "POST",
-    body: message,
-    headers: {
-      "Content-Type": "application/json",
-    },
-  }).then(res => console.log(res)).then(res => alert("thank you"+ message));
-}
