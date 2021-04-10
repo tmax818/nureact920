@@ -10,6 +10,9 @@ import {
 } from "reactstrap";
 // What is all this stuff????
 
+//class component has to have a render() method
+// that returns JSX
+
 class Directory extends Component {
   constructor(props) {
     super(props);
