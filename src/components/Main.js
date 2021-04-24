@@ -13,6 +13,7 @@ import { COMMENTS } from "../shared/comments";
 import { PARTNERS } from "../shared/partners";
 import { PROMOTIONS } from "../shared/promotions";
 
+// this is the main function that is passed to App.js
 class Main extends Component {
   constructor(props) {
     super(props);
@@ -38,7 +39,7 @@ class Main extends Component {
         />
       );
     };
-
+    // this expects a id so it can find which campsite to render 
     const CampsiteWithId = ({ match }) => {
       console.log(match.params);
       return (
