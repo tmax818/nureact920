@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import {
   Card,
   CardImg,
@@ -6,8 +6,20 @@ import {
   CardBody,
   Breadcrumb,
   BreadcrumbItem,
+  Button
 } from "reactstrap";
 import { Link } from "react-router-dom";
+
+class CommentForm extends Component {
+
+  render() {
+    return (
+      <div>
+        <Button outline><i className="fa-lg fa fa-pencil"></i> Submit Comment</Button>
+      </div>
+    )
+  }
+}
 
 function RenderCampsite({ campsite }) {
   return (
@@ -43,6 +55,7 @@ function RenderComments({ comments }) {
             </div>
           );
         })}
+        <CommentForm />
       </div>
     );
   }
