@@ -8,5 +8,5 @@ const bicycle = {
   },
 };
 
-
+console.log(bicycle.color)
 

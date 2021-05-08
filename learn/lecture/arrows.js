@@ -1,14 +1,17 @@
 ////
 
 // function hello(name) {
-//   return { studentName: name };
-// }
+//     return { studentName: name };
 
-const hello = name => ({studentName: name})
 
+const hello = (name) => {
+    return { studentName: name };
+}
+
+const goodbye = name => {
+    console.log(`Goodbye ${name}`)
+}
 
 console.log(hello("Sean"))
+goodbye("joe")
 
-// const hello = (name) => ({ studentName: name });
-
-// module.exports = hello;

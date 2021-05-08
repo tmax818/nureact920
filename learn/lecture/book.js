@@ -25,7 +25,25 @@ class Audiobook extends Book {
   };
 }
 
-// const my_audio = new Audiobook("Harry Potter", "JK")
+const my_audio = new Audiobook("Harry Potter", "JK")
 // console.log(my_audio)
 // my_audio.playAudio()
 // module.exports = { Book, Audiobook };
+
+
+class Person {
+  constructor(name, age, hobbies = []) {
+    this.name = name;
+    this.age = age;
+    this.hobbies = hobbies;
+  }
+
+  greet() {
+    console.log(`Hi my name is ${this.name}.`)
+    return `Hi my name is ${this.name}`
+  }
+
+  addHobby(hobby) {
+    this.hobbies.push(hobby)
+  }
+}
