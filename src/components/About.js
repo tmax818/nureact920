@@ -21,7 +21,7 @@ function RenderPartner({ partner }) {
       </React.Fragment>
     );
   }
-  return <div></div>;
+  return <div>Hi mom</div>;
 }
 
 function About(props) {
