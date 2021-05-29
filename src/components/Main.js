@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Directory from "./Directory";
@@ -14,15 +14,14 @@ import { PARTNERS } from "../shared/partners";
 import { PROMOTIONS } from "../shared/promotions";
 
 class Main extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      campsites: CAMPSITES,
-      comments: COMMENTS,
-      partners: PARTNERS,
-      promotions: PROMOTIONS,
-    };
-  }
+
+
+  state = {
+    campsites: CAMPSITES,
+    comments: COMMENTS,
+    partners: PARTNERS,
+    promotions: PROMOTIONS,
+  };
 
   render() {
     const HomePage = () => {
