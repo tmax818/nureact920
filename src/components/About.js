@@ -8,7 +8,7 @@ import {
   Media,
 } from "reactstrap";
 import { Link } from "react-router-dom";
-import { Loading } from "./LoadingComponent";
+import { Loading } from "./LoadingComponent.js";
 import { baseUrl } from "../shared/baseUrl";
 
 const PartnerList = (props) => {
