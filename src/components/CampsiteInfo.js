@@ -46,6 +46,7 @@ class CommentForm extends Component {
                   model=".rating"
                   id="rating"
                   name="rating"
+                  default={1}
                   placeholder="rating"
                   className="form-control"
                 >
